@@ -1,0 +1,13 @@
+valid_wine:
+  id: 1
+  appellation_id: 1
+  name: La Reserve de Leoville-Barton
+  producer: Chateau Leoville-Barton
+  winecolor_id: 1
+  winetype_id: 1
+  
+invalid_wine:
+  id: 2
+  name: abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx abc
+  producer: abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx
+  

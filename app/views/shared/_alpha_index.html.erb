@@ -1,0 +1,10 @@
+<div id="alpha_index">
+	<div id="alpha_index_title">Alphabetical Index</div>
+    <% @letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("") %>
+	<% @letters.each do |letter| %>
+	   <% letter_class = (letter == @initial) ? "letter_current" : "letter" %>
+	   <%= link_to letter, { :action => "index", :id => letter },
+							 :class => letter_class %>
+	<% end -%>
+	<br clear="all" />
+</div>

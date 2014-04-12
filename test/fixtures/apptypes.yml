@@ -1,0 +1,20 @@
+valid_apptype_1:
+  id: 1
+  country_id: 1
+  abbrev: AOC
+  fullname: Appellation d'Origine Controllee
+  translation: Controlled Name of Origin
+  
+valid_apptype_2:
+  id: 2
+  country_id: 1
+  abbrev: VdP
+  fullname: Vin du Pays
+  translation: Country Wine
+  nexthigher_id: 1
+  
+invalid_apptype:
+  id: 3
+  abbrev: asdfdasfdsfdsa
+  fullname: abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx
+  translation: abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx

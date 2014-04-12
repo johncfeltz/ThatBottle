@@ -1,0 +1,22 @@
+# winecolors.yml version 2: 1-July-2008
+#   loaded by rake db:bootstrap:enum_load
+#   Change/Development History:
+#   * unchanged from ThatBottle Beta 1B
+#   
+
+Red:
+  id: 1
+  winecolor: red
+  
+White:
+  id: 2
+  winecolor: white
+  
+Rosé:
+  id: 3
+  winecolor: rosé
+  
+Tawny/maderized:
+  id: 4
+  winecolor: tawny/maderized
+  

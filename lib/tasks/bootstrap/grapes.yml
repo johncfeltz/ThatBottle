@@ -1,0 +1,172 @@
+# grapes.yml version 2.1: 7-July-2008
+#   loaded by rake db:bootstrap:starter_load
+#   Change/Development History:
+#   * downloaded production data from ThatBottle Beta 1B on 6 July 2008 using phpMyAdmin YAML export function
+#   * compacted (id:) entries to remove gaps
+#   * checked for bad formatting (tabs)
+#   * no impact on other tables
+#
+1:
+  id: 1
+  name: Chardonnay
+  notes: Major white wine grape native to eastern France.  Responsible for Chablis and blanc de blancs Champagne.
+2:
+  id: 2
+  name: Marsanne
+  notes: Moderately-important white wine grape from central and eastern France.  Often blended.
+3:
+  id: 3
+  name: Roussanne
+  notes: Moderately-important white wine grape from eastern France.  Often blended.
+4:
+  id: 4
+  name: Riesling
+  notes: Major white-wine grape native to the Rhine valley.  Can be made in a wide range of sweetness levels.  
+5:
+  id: 5
+  name: Gewürztraminer
+  notes: Major white-wine grape native to Germany.  Has a spicy and racy characteristic well-suited to spicier cuisines.
+6:
+  id: 6
+  name: Alvarinho
+  notes: Major white-wine grape native to Portugal and Spain.
+7:
+  id: 7
+  name: Torrontes
+  notes: Moderately-important white wine grape native to Spain, but grown in large quantities in Argentina.  Fruity and very aromatic.
+8:
+  id: 8
+  name: Pinot Grigio
+  notes: Most common in northern Italy, produces light citrusy whites.  Very popular cocktail hour white.
+9:
+  id: 9
+  name: Semillon
+  notes: A major white wine grape, the primary component of both dry and sweet white Bordeaux.  Semillon is particularly subject to cinerea botrytis infection for the production of dessert wines.
+10:
+  id: 10
+  name: Sauvignon Blanc
+  notes: A major white-wine grape, both as a component of sweet and dry white Bordeaux, but also as a single varietal.
+11:
+  id: 11
+  name: Merlot
+  notes: A major red-wine grape, originally from Bordeaux.  Very fruity, usually low in tannins, and dependably ripening in cooler climates.
+12:
+  id: 12
+  name: Cabernet Sauvignon
+  notes: A major red-wine grape, the counterpart of Merlot in Bordeaux, providing spicy earthy notes and tannic backbone.
+13:
+  id: 13
+  name: Pinot Noir
+  notes: A major red-wine grape, the sole component of red Burgundy.  Low in tannins, with earthy and fruity notes.
+14:
+  id: 14
+  name: Cabernet Franc
+  notes: An ancestor of the more widely-known Cabernet Sauvignon.  Cabernet Franc is more cold-tolerant, and provides more cedar and bright red fruit aromatics.  Grown as a single varietal in Chinon in the Loire Valley, as well as parts of the United States.
+15:
+  id: 15
+  name: Malbec
+  notes: A moderately important red-wine grape, originating in Bordeaux and Cahors, but now planted most extensively in Argentina.  Provides richly textured and tannic reds.
+16:
+  id: 16
+  name: Gamay
+  notes: A moderately-important red wine grape, native to Beaujolais in eastern France.  Provides foxy and fruity light-red wines.
+17:
+  id: 17
+  name: Grenache
+  notes: A moderately-important red-wine grape native to Spain and southern France.  Usually blended with Syrah, Mourvedre, Tempranillo, and other grapes.
+18:
+  id: 18
+  name: Mourvedre
+  notes: A moderately-important red-wine grape native to Spain and southern France.  Usually blended.
+19:
+  id: 19
+  name: Syrah
+  notes: A major red-wine grape, native to southern France and planted most extensively in Australia (under the name Shiraz).
+20:
+  id: 20
+  name: Zinfandel
+  notes: A major red-wine grape, widely planted in California.  Can create young fruity reds as well as spicier and more structured wines.  Also used for light sweet rosé wines (the often maligned &quot;white&quot; Zinfandel).
+21:
+  id: 21
+  name: Tempranillo
+  notes: A major red-wine grape; Spain's answer to France's Cabernet Sauvignon.
+22:
+  id: 22
+  name: Sangiovese
+  notes: A major red-wine grape, the primary component of Chianti.
+23:
+  id: 23
+  name: Pinotage
+  notes: A moderately-important red-wine grape, hybridized of Pinot Noir and Cinsault at Stellenbosch University in South Africa in the 1920s, and still found almost exclusively there.  Pinotage develops moderate-tannin and highly aromatic reds, which often require slight chilling.
+24:
+  id: 24
+  name: Chenin Blanc
+  notes: A moderately-important white wine grape, native to the Loire Valley and also grown extensively in California (for jug wine) and in South Africa (under the name Steen).
+25:
+  id: 25
+  name: Aglianico
+  notes: A neglected red-wine grape from central and southern Italy, which has been revived and seen more plantings and interest since the 1990s.
+26:
+  id: 26
+  name: Bonarda
+  notes: A minor red-wine grape native to Italy, but widely planted in Argentina for basic light table wine.
+27:
+  id: 27
+  name: Petit Verdot
+  notes: One of the minor red-wine grapes of Bordeaux, provides depth and tannin in weak growing years.
+28:
+  id: 28
+  name: Viognier
+  notes: A moderately-important white wine grape, native to the Condrieu appellation in France.  Viognier almost died out from lack of interest in the 1970s, but has seen a resurgence of plantings in California, Virginia, South America, and most notably Australia, where it is blended with Shiraz to produce a less tannin, yet full-bodied, red.
+29:
+  id: 29
+  name: Prieto Picudo
+  notes: A red of minor importance in Spain, with bright fruit flavors of black cherry and cassis.  Similar in structure to Barbera, Bonarda, or Counoise.
+30:
+  id: 30
+  name: Negroamaro
+  notes: Native to southern Italy, the name means &quot;black and bitter&quot;.  Negroamaro makes dark, high-tannin wines such as Salice Salentino.
+31:
+  id: 31
+  name: Nero d'Avola
+  notes: A very common grape in Sicily and southern Italy, producing medium-bodied fruity red wines.
+32:
+  id: 32
+  name: Pinot Blanc
+  notes: Related to Pinot Gris, but not nearly as common.  Produces wines with more color and weight, but less acidity.
+33:
+  id: 33
+  name: Touriga Nacional
+  notes: One of the primary grapes for making Port.  Also found in dry red table wines from the Douro.
+34:
+  id: 34
+  name: Tinta Roriz
+  notes: A primary grape in the Douro valley.
+35:
+  id: 35
+  name: Carignane
+  notes: A moderately-important red-wine grape from the Rhone valley.
+36:
+  id: 36
+  name: Verdelho
+  notes: One of the two major white-wine grapes of Portugal and western Spain.  Often produces vegetal and mineral notes.
+37:
+  id: 37
+  name: Melon de Bourgogne
+  notes: Grown in the Loire valley, and is the dominant grape in Muscadet.
+38:
+  id: 38
+  name: Carmenère
+  notes: A 'fossil' variety, planted extensively in Bordeaux in the early 19th century but thought to be extinct.  It was rediscovered in Chile in the mid-1990s, where it had been mistaken for a poorly-performing strain of Merlot.  When allowed to ripen fully, produces dark, tannic, and chewy red wines with tobacco, earth, and dark fruit tastes.
+39:
+  id: 39
+  name: Nebbiolo
+  notes: The major red-wine grape of northern Italy, responsible for Barolo and Barbaresco.  Often exhibits smoky characteristics.
+40:
+  id: 40
+  name: Petite Sirah
+  notes: Only distantly related to Syrah, Petite Sirah produces dark, tannic, thick red wines with spice and very full texture.  Petite Sirah is often an excellent red wine to pair with sweet and spicy Chinese cuisine.
+41:
+  id: 41
+  name: Pugnitello
+  notes: An obscure, rediscovered red variety from Tuscany.

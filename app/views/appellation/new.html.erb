@@ -1,0 +1,18 @@
+<%= render :partial => "shared/content_header", :locals => { :model => "grape" } %>
+<h2><%= @title %></h2>
+
+<% form_for :appellation do |form| %>
+  <fieldset>
+  	<legend>Enter Details</legend>
+	
+	<%= error_messages_for "appellation" %>
+	
+    <%= render :partial => "fieldrow_name",  		  :locals => { :form => form } %>
+	<%= render :partial => "fieldrow_select_apptype", :locals => { :form => form } %>
+    <%= render :partial => "fieldrow_select_parent",  :locals => { :form => form } %>
+	<%= render :partial => "fieldrow_notes",  		  :locals => { :form => form } %>
+	
+    <%= render :partial => "shared/button_save" %>
+	
+  </fieldset>
+<% end %>

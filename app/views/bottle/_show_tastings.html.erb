@@ -1,0 +1,22 @@
+<% if !tastingnotes.empty? -%>
+  <hr>
+  <div id="showpane_sublegend">Tasting Notes</div>
+  <table width="100%" class="listset">
+  	<tr class="listheader">
+  	  <td>Date</td>
+	  <td>User</td>
+	  <td>Rating (0-10)</td>
+	  <td>Value Score (1-5)</td>
+	</tr> 
+
+    <% tastingnotes.each do |tnote| -%>
+      <tr valign="top" class = "<%= cycle('listrowodd', 'listroweven') %>">
+      <td><%= link_to tnote.created_at, {:controller => "tastingnote", :action => "show",
+     		:id => tnote} -%>
+	  <td><%= tnote.user.handle -%></td>
+	  <td><%= tnote.score -%></td>
+      <td><%= tnote.worth -%></td>
+    </tr>
+  <% end -%>
+  </table>
+<% end -%>

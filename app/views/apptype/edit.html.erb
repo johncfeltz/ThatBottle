@@ -1,0 +1,20 @@
+<%= render :partial => "shared/content_header", :locals => { :model => "apptype" } %>
+<h2><%= @title %></h2>
+
+<% form_for :apptype, :url => {:id => @apptype} do |form| %>
+  <fieldset>
+  	<legend>Edit Details</legend>
+	
+	<%= error_messages_for "apptype" %>
+	
+    <%= render :partial => "fieldrow_abbrev", 		     :locals => { :form => form } %>
+    <%= render :partial => "fieldrow_select_country",    :locals => { :form => form } %>
+    <%= render :partial => "fieldrow_fullname",          :locals => { :form => form } %>
+	<%= render :partial => "fieldrow_translation",       :locals => { :form => form } %>
+    <%= render :partial => "fieldrow_select_nexthigher", :locals => { :form => form } %>
+	<%= render :partial => "fieldrow_notes",  		     :locals => { :form => form } %>
+	
+    <%= render :partial => "shared/button_savechanges" %>
+	
+  </fieldset>
+<% end %>

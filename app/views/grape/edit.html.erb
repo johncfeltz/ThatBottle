@@ -1,0 +1,18 @@
+<% # saved as of 10 July 2008 12:43 -- edit working & DRY %>
+
+<%= render :partial => "shared/content_header", :locals => { :model => "grape" } %>
+<h2><%= @title %></h2>
+
+<% form_for :grape, :url => {:id => @grape} do |form| %>
+  <fieldset>
+  	<legend>Edit Details</legend>
+	
+	<%= error_messages_for "grape" %>
+	
+    <%= render :partial => "fieldrow_name", 		:locals => { :form => form } %>
+	<%= render :partial => "fieldrow_notes",  		:locals => { :form => form } %>
+
+    <%= render :partial => "shared/button_savechanges" %>
+
+  </fieldset>
+<% end %>

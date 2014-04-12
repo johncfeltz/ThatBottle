@@ -1,0 +1,2 @@
+module TastingeventHelper
+end

@@ -1,0 +1,23 @@
+<% if @users and not @users.empty? %>
+  <h2>Active Members</h2>
+  <table class="listset">
+    <tr class="listheader">
+      <td>Handle</td>
+	  <td>Membership level</td>
+	  <td>Date of Birth</td>
+      <td>Joined</td>
+	  <td>Last login</td>
+    </tr>
+
+    <% @users.each do |user| -%>
+      <tr valign="top" class="<%= cycle('listrowodd', 'listroweven') %>">
+      <td><%= user.handle %></td>
+	  <td><%= user.userstatus.status%></td>
+	  <td><%= user.dob.strftime("%d-%b-%Y") %></td>
+      <td><%= user.created_at.strftime("%d-%b-%Y") %></td>
+      <td><%= user.lastlogin.strftime("%d-%b-%Y") %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= will_paginate @grapes unless !@pagination %>
+<% end %>

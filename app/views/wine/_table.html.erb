@@ -1,0 +1,22 @@
+<% if @wines and not @wines.empty? %>
+  <table class="listset">
+    <tr class="listheader">
+      <td>Name</td>
+      <td>Producer</td>
+	  <td colspan="2">Characteristics</td>
+	  <td>Appellation</td>
+    </tr>
+	
+    <% @wines.each do |wine| -%>
+      <tr valign="top" class = "<%= cycle('listrowodd', 'listroweven') %>">
+        <td><%= link_to wine.name, :action => 'show', :id => wine %></td>
+        <td><%= wine.producer %></td>
+	    <td><%= wine.winetype.winetype   %></td>
+	    <td><%= wine.winecolor.winecolor %></td>
+	    <td><%= link_to wine.appellation.namechain_naked, :action => 'show', 
+						:id => wine.appellation_id, :controller => 'appellation' %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= will_paginate @wines unless !@pagination %>
+<% end %>

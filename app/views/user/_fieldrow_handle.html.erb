@@ -1,0 +1,5 @@
+<div class="form_row">
+  <label for="handle">Username:</label>
+  <%= form.text_field :handle, :size => User::HANDLE_SIZE,
+					  :maxlength => User::HANDLE_MAX_LENGTH %>
+</div>

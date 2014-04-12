@@ -1,0 +1,20 @@
+<% if @countries and not @countries.empty? %>
+  <table class = "listset">
+    <tr class="listheader">
+      <td>Name</td>
+      <td colspan="3">ISO Codes</td>
+      <td>Notes</td>
+    </tr>
+	
+    <% @countries.each do |country| -%>
+      <tr valign="top" class = "<%= cycle('listrowodd', 'listroweven') %>">
+        <td><%= link_to country.name,         :action => 'show', :id => country %></td>
+        <td><%= link_to country.isocode_2let, :action => 'show', :id => country %></td>
+        <td><%= link_to country.isocode_3let, :action => 'show', :id => country %></td>
+        <td><%= link_to country.isocode_num,  :action => 'show', :id => country %></td>
+        <td><%= truncate(country.notes, 50) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= will_paginate @countries unless !@pagination %>
+<% end %>

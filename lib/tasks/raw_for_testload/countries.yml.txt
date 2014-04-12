@@ -1,0 +1,254 @@
+1:
+  id: 1
+  code2: FR
+  code3: FRA
+  codenumeric: 250
+  name: France
+  notes: Probably the most respected producer of wines in the world, although quality can vary, and value is often lacking in comparison to southern hemisphere producers.
+  appellationtypes_count: 5
+2:
+  id: 2
+  code2: DE
+  code3: DEU
+  codenumeric: 276
+  name: Germany
+  notes: Noted for sweet and off-dry whites from the Riesling, Gewurztraminer, and Pinot Gris grapes.  Quality can be highly variable, and the naming and labelling rules are difficult to understand.  
+German producers are notorious for over-use of sulfites, which can often be detected on the nose in cheaper bottles.
+  appellationtypes_count: 3
+3:
+  id: 3
+  code2: IT
+  code3: ITA
+  codenumeric: 380
+  name: Italy
+  notes: Prolific producer and consumer of wine; no country has a more ingrained wine culture at the everyday level than Italy.  Fine reds are produced in the north: Chianti, Barolo, Barbaresco, while fruitier reds and whites are produced in the south, especially Sicily.
+  appellationtypes_count: 4
+4:
+  id: 6
+  code2: NZ
+  code3: NZL
+  codenumeric: 554
+  name: New Zealand
+  notes: Marlborough sauvignon blancs have completely changed consumer expectations of sauvignon blanc.  
+  appellationtypes_count: 2
+5:
+  id: 7
+  code2: AU
+  code3: AUS
+  codenumeric: 036
+  name: Australia
+  notes: Australian wine law in its current form, with Geographical Indications similar to (but not as strict as) European appellations, was enacted in 1993.  GIs can be zones, regions, or sub-regions, in increasing order of specificity.
+  appellationtypes_count: 3
+6:
+  id: 8
+  code2: AT
+  code3: AUT
+  codenumeric: 040
+  name: Austria
+  notes: Produces primarily white wines.  Gruner Veltliner is the most notable native grape.
+  appellationtypes_count: 1
+7:
+  id: 9
+  code2: ZA
+  code3: ZAF
+  codenumeric: 710
+  name: South Africa
+  notes: Often exhibits an interesting mix of old-world and new-world techniques and flavors.  The Pinotage hybrid (created in the 1920s from Pinot Noir and Cinsault) is the signature grape of South Africa.
+  appellationtypes_count: 1
+8:
+  id: 10
+  code2: AR
+  code3: ARG
+  codenumeric: 032
+  name: Argentina
+  notes: A notable producer of Malbec, Bonarda, and Torrontes
+  appellationtypes_count: 1
+9:
+  id: 12
+  code2: CA
+  code3: CAN
+  codenumeric: 124
+  name: Canada
+  notes: Ice wine!               And Moose...
+  appellationtypes_count: 2
+10:
+  id: 13
+  code2: US
+  code3: USA
+  codenumeric: 840
+  name: United States of America
+  notes: 
+  appellationtypes_count: 2
+11:
+  id: 14
+  code2: SU
+  code3: SUN
+  codenumeric: 810
+  name: Soviet Union
+  notes: Defunct after 1991.  Some wines produced post-1991 still carry Soviet labels for expediency's sake.
+  appellationtypes_count: 1
+12:
+  id: 15
+  code2: CL
+  code3: CHL
+  codenumeric: 152
+  name: Chile
+  notes: Rapidly increasing in quality, with a number of investments from international winemakers - most notably the Rothschild family's Escudo Rojo brand.  Concha y Toro is the largest domestic producer.  The Carmenere grape, formerly a minor blending grape in Bordeaux before the 19th century phylloxera epidemic, was rediscovered in Chile in the late 1990s and has become a signature grape for the country.
+  appellationtypes_count: 2
+13:
+  id: 16
+  code2: ES
+  code3: ESP
+  codenumeric: 724
+  name: Spain
+  notes: Spain has the largest area under cultivation in the wine-growing world.  But it produces less wine than France or Italy, due to the low level of groundwater which forces widely-spaced vines.  The Rioja and Ribera del Duero regions are the most renowned for powerful, long-lived red wines.
+Key aging terms for Spanish wines (the time periods given are for DOC Rioja and DO Ribera del Duero -- other DOs/DOCs have varying requirements for barrel and bottle aging).
+Joven: a young wine with little or no barrel aging.
+Crianza: minimum of 1 year in barrel, 2 years overall.
+Reserva: minimum of 1 year in barrel, 3 years overall.
+Gran Reserva: minimum of 2 years in barrel, 5 years overall.
+  appellationtypes_count: 6
+14:
+  id: 17
+  code2: CH
+  code3: CHE
+  codenumeric: 756
+  name: Switzerland
+  notes: 
+  appellationtypes_count: 0
+15:
+  id: 18
+  code2: GR
+  code3: GRC
+  codenumeric: 300
+  name: Greece
+  notes: Greece has a bewildering variety of native grapes, which are still poorly catalogued and understood.  Retsina, the resin-flavored cafe wine, is best known to the casual tourist, but a number of fine crisp whites are being produced with more attention paid to freshness and refrigeration.
+  appellationtypes_count: 4
+16:
+  id: 19
+  code2: SI
+  code3: SVN
+  codenumeric: 705
+  name: Slovenia
+  notes: The northernmost part of the former Yugoslavia, with wine-growing regions most similar to northeastern Italy and southern Austria.
+  appellationtypes_count: 3
+17:
+  id: 20
+  code2: IL
+  code3: ISR
+  codenumeric: 376
+  name: Israel
+  notes: 
+  appellationtypes_count: 1
+18:
+  id: 21
+  code2: LB
+  code3: LBN
+  codenumeric: 422
+  name: Lebanon
+  notes: 
+  appellationtypes_count: 1
+19:
+  id: 22
+  code2: ZW
+  code3: ZWE
+  codenumeric: 716
+  name: Zimbabwe
+  notes: 
+  appellationtypes_count: 0
+20:
+  id: 23
+  code2: PT
+  code3: PRT
+  codenumeric: 620
+  name: Portugal
+  notes: Most famed for fortified wines - Port and Madeira.  Also an excellent producer of light white and red from the north (Vinhos Verdes), and lately an up-and-coming producer of full-bodied red from the Douro valley, where Port is produced.
+  appellationtypes_count: 2
+21:
+  id: 24
+  code2: BG
+  code3: BGR
+  codenumeric: 100
+  name: Bulgaria
+  notes: 
+  appellationtypes_count: 1
+22:
+  id: 25
+  code2: HU
+  code3: HUN
+  codenumeric: 348
+  name: Hungary
+  notes: Most noted for sweet wine (Tokaji) and powerful reds (Egri Bikaver/Bulls Blood)
+  appellationtypes_count: 2
+23:
+  id: 26
+  code2: SL
+  code3: SLO
+  codenumeric: 703
+  name: Slovakia
+  notes: 
+  appellationtypes_count: 1
+24:
+  id: 27
+  code2: HR
+  code3: HRV
+  codenumeric: 191
+  name: Croatia
+  notes: 
+  appellationtypes_count: 1
+25:
+  id: 28
+  code2: JP
+  code3: JPN
+  codenumeric: 392
+  name: Japan
+  notes: 
+  appellationtypes_count: 0
+26:
+  id: 29
+  code2: MX
+  code3: MEX
+  codenumeric: 484
+  name: Mexico
+  notes: 
+  appellationtypes_count: 0
+27:
+  id: 30
+  code2: PE
+  code3: PER
+  codenumeric: 604
+  name: Peru
+  notes: 
+  appellationtypes_count: 0
+28:
+  id: 31
+  code2: CY
+  code3: CYP
+  codenumeric: 196
+  name: Cyprus
+  notes: 
+  appellationtypes_count: 2
+29:
+  id: 32
+  code2: UY
+  code3: URY
+  codenumeric: 858
+  name: Uruguay
+  notes: 
+  appellationtypes_count: 2
+30:
+  id: 33
+  code2: BO
+  code3: BOL
+  codenumeric: 068
+  name: Bolivia
+  notes: 
+  appellationtypes_count: 0
+31:
+  id: 34
+  code2: BR
+  code3: BRA
+  codenumeric: 076
+  name: Brazil
+  notes: 
+  appellationtypes_count: 0

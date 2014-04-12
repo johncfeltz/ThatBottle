@@ -1,0 +1,15 @@
+# users.yml version 2: 1-July-2008
+#   loaded by rake db:bootstrap:admin_load
+#   Change/Development History:
+#
+
+Admin:
+  id: 1
+  handle: Admin
+  fullname: Administrator
+  dob: "1965-01-01"
+  email: admin@thatbottle.com
+  password: V1noverita$
+  userstatus_id: 1
+  
+  

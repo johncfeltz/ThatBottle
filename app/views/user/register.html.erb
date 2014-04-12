@@ -1,0 +1,20 @@
+<h2><%= @title %></h2>
+<% form_for :user do |form| %>
+  <fieldset>
+  	<legend>Enter Your Details</legend>
+
+	<%= error_messages_for "user" %>
+	
+    <%= render :partial => "fieldrow_handle", 		:locals => { :form => form } %>
+    <%= render :partial => "fieldrow_fullname", 	:locals => { :form => form } %>
+    <%= render :partial => "fieldrow_email",		:locals => { :form => form } %>
+	<%= render :partial => "fieldrow_dob",  		:locals => { :form => form } %>
+	<%= render :partial => "fieldrow_password",  	:locals => { :form => form } %>
+
+	<p>By clicking the "Join!" button below, you agree to observe the Terms of Service of ThatBottle.com.
+	   You also affirm that you are of legal drinking age in your jurisdiction of residence.</p>
+    <%= render :partial => "button_join" %>
+	
+  </fieldset>
+<% end %>
+  

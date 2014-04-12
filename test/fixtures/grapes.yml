@@ -1,0 +1,8 @@
+valid_grape:
+  id: 1
+  name: Touriga Nacional
+  notes: Mainstay of the port industry
+  
+invalid_grape:
+  id: 2
+  name: a

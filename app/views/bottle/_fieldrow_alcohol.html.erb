@@ -1,0 +1,7 @@
+<div class="form_row">
+	<label for="alcohol">Alcohol:</label>
+	<%= form.text_field :alcohol,
+						:size => Bottle::ALCOHOL_SIZE,
+						:maxlength => Bottle::ALCOHOL_MAX_LENGTH -%>
+	<%= "%" %>
+</div>

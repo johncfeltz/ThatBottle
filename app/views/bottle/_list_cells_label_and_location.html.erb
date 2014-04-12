@@ -1,0 +1,7 @@
+<% if bottle.instock? -%>
+   <td><%= link_to bottle.cellarlabel,    :action => "show", :id => bottle %></td>
+   <td><%= link_to bottle.cellarlocation, :action => "show", :id => bottle %></td>
+<% else -%>
+   <td class= "faded">Disposed of via:</td>
+   <td class= "faded"><%= bottle.disptype.disptype -%></td>
+<% end -%>

@@ -1,0 +1,70 @@
+# appellations.yml version 2.0: 7-July-2008
+#   loaded by rake db:bootstrap:starter_load
+#   Change/Development History:
+#   * Rough sample data for development work only
+#
+#   Not useful for production until Version 2.1 built:
+#   * copy production data from ThatBottle Beta 1B into a new table
+#   * rename fields appropriatly
+#   * edit apptype_id to reflect compressed (id:) entries in apptypes.yml
+#   * export using PHPMyAdmin YAML export facility.
+#   * note: only gap of 48 between (id:) and compressed (id:), out of nearly 2000 entries, so no point
+#     in attempting to compress the (id:) field.
+#   * since not compressing (id:) field, no impact on wines table
+#
+Bordeaux:
+  id: 1
+  apptype_id: 1
+  name: Bordeaux
+
+St-Em:
+  id: 2
+  apptype_id: 1
+  name: Saint-Emilion
+  parentappellation_id: 1
+  
+Mont St-E:
+  id: 3
+  apptype_id: 1
+  name: Montagne Saint-Emilion
+  parentappellation_id: 2
+
+Oc:
+  id: 4
+  apptype_id: 3
+  name: Pays d'Oc
+
+Cotes Gasc:
+  id: 5
+  apptype_id: 3
+  name: Pays des Cotes Gascon
+  parentappellation_id: 4
+
+Alexander:
+  id: 6
+  apptype_id: 5
+  name: Alexander Valley
+  parentappellation_id: 7
+  
+Sonoma:
+  id: 7
+  apptype_id: 5
+  name: Sonoma County
+  parentappellation_id: 8
+    
+Cali:
+  id: 8
+  apptype_id: 6
+  name: California
+  
+Robertson:
+  id: 9
+  apptype_id: 7
+  name: Robertson
+  parentappellation_id: 10
+  
+Western Cape:
+  id: 10
+  apptype_id: 7
+  name: Western Cape
+  

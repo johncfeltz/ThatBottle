@@ -1,0 +1,6 @@
+<div class="form_row">
+	<label for="isocode_num">ISO 3166 3-Digit Numeric Code:</label>
+	<%= form.text_field :isocode_num, 
+						:size => Country::ISOCODE_NUM_SIZE,
+						:maxlength => Country::ISOCODE_NUM_LENGTH %>
+</div>

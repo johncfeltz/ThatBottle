@@ -1,0 +1,32 @@
+# wines.yml version 2.0: 7-July-2008
+#   loaded by rake db:bootstrap:starter_load
+#   Change/Development History:
+#   * Rough sample data for development work only
+#
+#   Not useful for production until Version 2.1 built:
+#   * copy production data from ThatBottle Beta 1B into a new table
+#   * rename fields appropriatly
+#   * edit winetype_id to reflect re-ordered entries in winetypes.yml
+#   * export using PHPMyAdmin YAML export facility.
+#
+Chateau Ex:
+  id: 1
+  appellation_id: 2
+  name: Chateau Ex
+  winecolor_id: 1
+  winetype_id: 1
+
+Chateau Coucy:
+  id: 2
+  appellation_id: 61
+  name: Chateau Coucy
+  winecolor_id: 1
+  winetype_id: 1
+  
+Alex-Fitch:
+  id: 3
+  appellation_id: 760
+  name: Alexander & Fitch Cabernet Sauvignon
+  producer: Alexander & Fitch Wines
+  winecolor_id: 1
+  winetype_id: 1

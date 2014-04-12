@@ -1,0 +1,33 @@
+# disptypes.yml version 2: 1-July-2008
+#   loaded by rake db:bootstrap:enum_load
+#   Change/Development History:
+#   * added new items and re-ordered some of those from ThatBottle Beta 1B
+#   
+
+Consumption:
+  id: 1
+  disptype: consumption
+  
+Gift:
+  id: 2
+  disptype: gift
+
+Donation:
+  id: 3
+  disptype: donation
+    
+Legacy:
+  id: 4
+  disptype: legacy
+  
+Sale:
+  id: 5
+  disptype: sale
+
+Spoilage:
+  id: 6
+  disptype: spoilage
+    
+Loss:
+  id: 7
+  disptype: loss

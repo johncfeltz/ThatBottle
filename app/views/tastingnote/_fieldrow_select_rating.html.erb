@@ -1,0 +1,6 @@
+<div class="form_row">
+	<% @scores = (0..10).map {|s| [s, s]} %>
+	<label for="score">Rating:</label>
+	<%= form.select(:score, @scores)  %>
+	0 = undrinkable, 1-4 = poor quality, 5 = palatable, 7 = high quality, 9 = exceptional, 10 = outstanding
+</div>

@@ -1,0 +1,21 @@
+<div id="topnav">
+  <span style="float: right">
+  	<% if logged_in? -%>
+	  <small>User ID <%= current_user %> |
+	         <% user = User.find_by_id (current_user) %> 
+			 Cellar ID <%= user.cellar %></small>
+	  <%= nav_link "My Home",   "user", "index" %> |
+	  <%= nav_link "Logout",    "user", "logout" %>
+	<% else -%>
+	  <%= nav_link "Register",  "user", "register" %> |
+	  <%= nav_link "Login",     "user", "login" %>
+	<% end -%>
+  </span>
+  <%= nav_link "Main",       "static" %> |
+  <%= nav_link "About Us",   "static", "about" %> |
+  <%= nav_link "News",  	 "static", "devel" %> |
+  <%= nav_link "Legal",      "static", "legal" %> |
+  <%= nav_link "Help",       "static", "help" %> |
+  <%= nav_link "Credits",    "static", "credit" %> |
+  <%= nav_link "Contact Us", "static", "contact" %>
+</div>

@@ -1,0 +1,4 @@
+<% if !apptype.parent.nil? -%>
+	<%= link_to apptype.parent.abbrev, :action => 'show', :id => apptype.parent.id %>
+<% end -%>
+

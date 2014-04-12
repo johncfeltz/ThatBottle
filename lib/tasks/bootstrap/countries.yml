@@ -1,0 +1,225 @@
+# countries.yml version 2.1: 7-July-2008
+#   loaded by rake db:bootstrap:starter_load
+#   Change/Development History:
+#   * downloaded production data from ThatBottle Beta 1B on 6 July 2008 using phpMyAdmin YAML export function
+#   * compacted (id:) entries to remove gaps
+#   * checked for bad formatting (tabs)
+#   * moderate impact on apptypes table
+#
+1:
+  id: 1
+  isocode_2let: FR
+  isocode_3let: FRA
+  isocode_num: 250
+  name: France
+  notes: Probably the most respected producer of wines in the world, although quality can vary, and value is often lacking in comparison to southern hemisphere producers.
+2:
+  id: 2
+  isocode_2let: DE
+  isocode_3let: DEU
+  isocode_num: 276
+  name: Germany
+  notes: Noted for sweet and off-dry whites from the Riesling, Gewurztraminer, and Pinot Gris grapes.  Quality can be highly variable, and the naming and labelling rules are difficult to understand.  German producers are notorious for over-use of sulfites, which can often be detected on the nose in cheaper bottles.
+3:
+  id: 3
+  isocode_2let: IT
+  isocode_3let: ITA
+  isocode_num: 380
+  name: Italy
+  notes: Prolific producer and consumer of wine; no country has a more ingrained wine culture at the everyday level than Italy.  Fine reds are produced in the north (Chianti, Barolo, Barbaresco), while fruitier reds and whites are produced in the south, especially Sicily.
+4:
+  id: 6
+  isocode_2let: NZ
+  isocode_3let: NZL
+  isocode_num: 554
+  name: New Zealand
+  notes: Marlborough sauvignon blancs have completely changed consumer expectations of sauvignon blanc.  
+5:
+  id: 7
+  isocode_2let: AU
+  isocode_3let: AUS
+  isocode_num: 036
+  name: Australia
+  notes: Australian wine law in its current form, with Geographical Indications similar to (but not as strict as) European appellations, was enacted in 1993.  GIs can be zones, regions, or sub-regions, in increasing order of specificity.
+6:
+  id: 8
+  isocode_2let: AT
+  isocode_3let: AUT
+  isocode_num: 040
+  name: Austria
+  notes: Produces primarily white wines.  Gruner Veltliner is the most notable native grape.
+7:
+  id: 9
+  isocode_2let: ZA
+  isocode_3let: ZAF
+  isocode_num: 710
+  name: South Africa
+  notes: Often exhibits an interesting mix of old-world and new-world techniques and flavors.  The Pinotage hybrid (created in the 1920s from Pinot Noir and Cinsault) is the signature grape of South Africa.
+8:
+  id: 10
+  isocode_2let: AR
+  isocode_3let: ARG
+  isocode_num: 032
+  name: Argentina
+  notes: A notable producer of Malbec, Bonarda, and Torrontes.
+9:
+  id: 12
+  isocode_2let: CA
+  isocode_3let: CAN
+  isocode_num: 124
+  name: Canada
+  notes: Ice wine!  And Moose...
+10:
+  id: 13
+  isocode_2let: US
+  isocode_3let: USA
+  isocode_num: 840
+  name: United States of America
+  notes: 
+11:
+  id: 14
+  isocode_2let: SU
+  isocode_3let: SUN
+  isocode_num: 810
+  name: Soviet Union
+  notes: Defunct after 1991.  Some wines produced post-1991 carry Soviet labels for expediency's sake.
+12:
+  id: 15
+  isocode_2let: CL
+  isocode_3let: CHL
+  isocode_num: 152
+  name: Chile
+  notes: Rapidly increasing in quality, with a number of investments from international winemakers - most notably the Rothschild family's Escudo Rojo brand.  Concha y Toro is the largest domestic producer.  The Carmenere grape, formerly a minor blending grape in Bordeaux before the 19th century phylloxera epidemic, was rediscovered in Chile in the late 1990s and has become a signature grape for the country.
+13:
+  id: 16
+  isocode_2let: ES
+  isocode_3let: ESP
+  isocode_num: 724
+  name: Spain
+  notes: Spain has the largest area under cultivation in the wine-growing world.  But it produces less wine than France or Italy, due to the low level of groundwater which forces widely-spaced vines.  The Rioja and Ribera del Duero regions are the most renowned for powerful, long-lived red wines.  Key aging terms for Spanish wines (the time periods given are for DOC Rioja and DO Ribera del Duero -- other DOs/DOCs have varying requirements for barrel and bottle aging); Joven - a young wine with little or no barrel aging; Crianza - minimum of 1 year in barrel, 2 years overall; Reserva - minimum of 1 year in barrel, 3 years overall; Gran Reserva - minimum of 2 years in barrel, 5 years overall.
+14:
+  id: 17
+  isocode_2let: CH
+  isocode_3let: CHE
+  isocode_num: 756
+  name: Switzerland
+  notes: 
+15:
+  id: 18
+  isocode_2let: GR
+  isocode_3let: GRC
+  isocode_num: 300
+  name: Greece
+  notes: Greece has a bewildering variety of native grapes, which are still poorly catalogued and understood.  Retsina, the resin-flavored cafe wine, is best known to the casual tourist, but a number of fine crisp whites are being produced with more attention paid to freshness and refrigeration.
+16:
+  id: 19
+  isocode_2let: SI
+  isocode_3let: SVN
+  isocode_num: 705
+  name: Slovenia
+  notes: The northernmost part of the former Yugoslavia, with wine-growing regions most similar to northeastern Italy and southern Austria.
+17:
+  id: 20
+  isocode_2let: IL
+  isocode_3let: ISR
+  isocode_num: 376
+  name: Israel
+  notes: 
+18:
+  id: 21
+  isocode_2let: LB
+  isocode_3let: LBN
+  isocode_num: 422
+  name: Lebanon
+  notes: 
+19:
+  id: 22
+  isocode_2let: ZW
+  isocode_3let: ZWE
+  isocode_num: 716
+  name: Zimbabwe
+  notes: 
+20:
+  id: 23
+  isocode_2let: PT
+  isocode_3let: PRT
+  isocode_num: 620
+  name: Portugal
+  notes: Most famed for fortified wines - Port and Madeira.  Also an excellent producer of light white and red from the north (Vinho Verde), and lately an up-and-coming producer of full-bodied red from the Douro valley, where Port is produced.
+21:
+  id: 24
+  isocode_2let: BG
+  isocode_3let: BGR
+  isocode_num: 100
+  name: Bulgaria
+  notes: 
+22:
+  id: 25
+  isocode_2let: HU
+  isocode_3let: HUN
+  isocode_num: 348
+  name: Hungary
+  notes: Most noted for sweet wine (Tokaji) and powerful reds (Egri Bikaver/Bulls Blood)
+23:
+  id: 26
+  isocode_2let: SL
+  isocode_3let: SLO
+  isocode_num: 703
+  name: Slovakia
+  notes: 
+24:
+  id: 27
+  isocode_2let: HR
+  isocode_3let: HRV
+  isocode_num: 191
+  name: Croatia
+  notes: 
+25:
+  id: 28
+  isocode_2let: JP
+  isocode_3let: JPN
+  isocode_num: 392
+  name: Japan
+  notes: 
+26:
+  id: 29
+  isocode_2let: MX
+  isocode_3let: MEX
+  isocode_num: 484
+  name: Mexico
+  notes: 
+27:
+  id: 30
+  isocode_2let: PE
+  isocode_3let: PER
+  isocode_num: 604
+  name: Peru
+  notes: 
+28:
+  id: 31
+  isocode_2let: CY
+  isocode_3let: CYP
+  isocode_num: 196
+  name: Cyprus
+  notes: 
+29:
+  id: 32
+  isocode_2let: UY
+  isocode_3let: URY
+  isocode_num: 858
+  name: Uruguay
+  notes: 
+30:
+  id: 33
+  isocode_2let: BO
+  isocode_3let: BOL
+  isocode_num: 068
+  name: Bolivia
+  notes: 
+31:
+  id: 34
+  isocode_2let: BR
+  isocode_3let: BRA
+  isocode_num: 076
+  name: Brazil
+  notes: 

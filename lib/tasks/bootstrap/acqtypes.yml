@@ -1,0 +1,22 @@
+# acqtypes.yml version 2: 1-July-2008
+#   loaded by rake db:bootstrap:enum_load
+#   Change/Development History:
+#   * unchanged from ThatBottle Beta 1B
+#
+
+Purchase:
+  id: 1
+  acqtype: purchase
+  
+Gift:
+  id: 2
+  acqtype: gift
+  
+Inheritance:
+  id: 3
+  acqtype: inheritance
+  
+Prize:
+  id: 4
+  acqtype: prize
+  

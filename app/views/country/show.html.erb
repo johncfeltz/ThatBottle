@@ -1,0 +1,15 @@
+<%= render :partial => "shared/content_header", :locals => { :model => "country" } %>
+<div id="showpane">
+  <div id="showpane_legend"><%= @country.name %></div>
+  <p><b>ISO 3166 A2: </b><%= @country.isocode_2let %></p>
+  <p><b>ISO 3166 A3: </b><%= @country.isocode_3let %></p>
+  <p><b>ISO 3166: </b><%= @country.isocode_num %></p>
+  <p><b>Notes: </b><%= @country.notes %></p>
+
+  <hr>
+  <div id="showpane_sublegend">Appellation Types</div>
+  <%= render :partial => "show_apptypes", :locals => { :apptypes => @apptypes } %>
+
+</div>
+
+<%= render :partial => "shared/show_footer", :locals => { :model => "country", :id => @country } %>

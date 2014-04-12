@@ -1,0 +1,11 @@
+<p>
+  <% if is_allowed?("tastingnote", "new_w") %>
+    <%= link_to 'I tasted this wine', :controller => 'tastingnote', :action => 'new_w', :id => @wine %> |
+  <% end %>
+  <% if is_allowed?("wine", "edit", @wine) %>
+	<%= link_to 'Edit this wine', :action => 'edit', :id => @wine %> |
+  <% end %>
+  <% if is_allowed?("wine", "delete", @wine) %>
+    <%= link_to 'Delete this wine', { :action => 'destroy', :id => @wine }, :confirm => 'Are you sure?' %> |
+  <% end %>
+</p>

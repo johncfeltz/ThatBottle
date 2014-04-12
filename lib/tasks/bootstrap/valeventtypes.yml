@@ -1,0 +1,22 @@
+# valeventtypes.yml version 2: 1-July-2008
+#   loaded by rake db:bootstrap:enum_load
+#   Change/Development History:
+#   * unchanged from ThatBottle Beta 1B
+#   
+
+Purchase:
+  id: 1
+  eventtype: purchase
+  
+Appraisal:
+  id: 2
+  eventtype: appraisal
+  
+Publication:
+  id: 3
+  eventtype: publication
+  
+Comparison:
+  id: 4
+  eventtype: comparison
+  

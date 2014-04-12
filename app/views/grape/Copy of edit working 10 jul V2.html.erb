@@ -1,0 +1,25 @@
+<% # saved as of 10 July 2008 11:00 AM  %>
+<% # need to tweak to restore use of partials.  %>
+<% # need to tweak grape_controller.rb as well.  %>
+
+<% # 10 July 2008 13:00  %>
+<% # work completed in main branch of source code -- keep this for example only %>
+
+<%= render :partial => "shared/content_header" %>
+
+<h2><%= @title %></h2>
+
+<% form_for :grape, :url => {:action => 'update', :id => @grape} do |form| %>
+  <fieldset>
+  	<legend>Edit Details</legend>
+	
+	<%= error_messages_for "grape" %>
+	
+    <%= render :partial => "fieldrow_name", 		:locals => { :form => form } %>
+	<%= render :partial => "fieldrow_notes",  		:locals => { :form => form } %>
+	<div class="form_row">
+	    <%= submit_tag "Save Changes", :class => "submit" %>
+    </div>
+
+  </fieldset>
+<% end %>

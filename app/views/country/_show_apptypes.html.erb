@@ -1,0 +1,29 @@
+<% if apptypes.empty? -%>
+  <p>(none)</p>
+<% else -%>
+  <table width="100%" class="listset">
+  	<tr class="listheader">
+      <td>Abbreviation</td>
+	  <td>Full Name</td>
+	  <td>Translation</td>
+      <% if ENV["RAILS_ENV"] == "development" -%>
+        <td></td>
+	  <% end -%>
+	</tr> 
+
+    <% apptypes.each do |apptype| -%>
+      <tr valign="top" class = "<%= cycle('listrowodd', 'listroweven') %>">
+      <td><%= link_to apptype.abbrev, {:controller => "apptype", :action => "show",
+     		:id => apptype} -%></td>
+      <td><%= link_to apptype.fullname, {:controller => "apptype", :action => "show",
+     		:id => apptype} -%></td>
+      <td><%= link_to apptype.translation, {:controller => "apptype", :action => "show",
+     		:id => apptype} -%></td>
+      <% if ENV["RAILS_ENV"] == "development" -%>
+        <td><small><%= link_to 'Edit', {:controller => "apptype", :action => "edit",
+            :id => apptype} -%> </small></td>
+	  <% end -%>
+    </tr>
+  <% end -%>
+  </table>
+<% end -%>

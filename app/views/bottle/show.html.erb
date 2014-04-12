@@ -1,0 +1,18 @@
+<%= render :partial => "shared/content_header", :locals => { :model => "grape" } %>
+
+<div id="showpane">
+  <div id="showpane_legend"><%= @bottle.ownerchain %>: <%= @bottle.wine.name %></div>
+  <p><b>Vintage: </b><%= @bottle.vintage %></p>
+  <p><b>Size: </b><%= @bottle.bottlesize %> ml</p>
+  <%= render :partial => "show_label_and_location", :locals => { :bottle => @bottle } %>
+  <p><b>Alcohol: </b><%= @bottle.alcohol %> %</p>
+  <p><b>Notes: </b><%= @bottle.notes %></p>
+
+  <%= render :partial => "show_acquisition", :locals => { :bottle => @bottle } %>
+  <%= render :partial => "show_disposition", :locals => { :bottle => @bottle } %>
+  <%= render :partial => "show_valuations", :locals => { :bottle => @bottle } %>
+  <%= render :partial => "show_tastings", :locals => { :tastingnotes => @bottle.tastingnotes } %>
+</div>
+
+<%= render :partial => "show_footer", :locals => { :id => @bottle } %>
+

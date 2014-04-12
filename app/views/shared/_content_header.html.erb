@@ -1,0 +1,14 @@
+<div id="content_header">
+  <% if is_allowed?(model, "index") %>
+    <%= link_to "Index",    :action => "index" %> |
+  <% end%>
+  <% if is_allowed?(model, "search") %>
+	<%= link_to "Search",   :action => "search" %> |
+  <% end%>
+  <% if is_allowed?(model, "new") %>
+	<%= link_to "New",      :action => "new" %> |
+  <% end%>
+  <% if is_allowed?(model, "list") %>
+	<%= link_to "List All", :action => "list" %>
+  <% end%>
+</div>

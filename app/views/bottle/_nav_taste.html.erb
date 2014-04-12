@@ -1,0 +1,3 @@
+<% if bottle.instock? -%>
+  <%= link_to 'I tasted this bottle', :controller => 'tastingnote', :action => 'new_b', :id => @bottle %> |
+<% end -%>

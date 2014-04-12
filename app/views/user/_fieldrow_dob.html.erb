@@ -1,0 +1,9 @@
+<div class="form_row">
+  <label for="dob">Date of Birth:</label>
+  <%= date_select :user, :dob,
+						 :start_year    => User::START_YEAR,
+						 :end_year      => Time.now.year - 21,
+						 :include_blank => false,
+						 :order 		=> [:day, :month, :year] %>
+  <i>You must be 21 years old to join.</i>
+</div>

@@ -1,0 +1,16 @@
+<% if @grapes and not @grapes.empty? %>
+  <table class="listset">
+    <tr class="listheader">
+      <td>Name</td>
+      <td>Notes</td>
+    </tr>
+
+    <% @grapes.each do |grape| -%>
+      <tr valign="top" class="<%= cycle('listrowodd', 'listroweven') %>">
+        <td><%= link_to grape.name, :action => 'show', :id => grape %></td>
+        <td><%= truncate(grape.notes, Grape::NOTES_CLIP_LENGTH) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= will_paginate @grapes unless !@pagination %>
+<% end %>

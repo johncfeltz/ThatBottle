@@ -1,0 +1,11 @@
+<!-- All the DRY stuff from the 2 polymorphic ways of creating a tasting note:  -->
+<!-- For a bottle (new_b.*) and for a wine (new_w.*)							-->
+
+<%= render :partial => "fieldrow_visual",				:locals => { :form => form } %>
+<%= render :partial => "fieldrow_olfactory",			:locals => { :form => form } %>
+<%= render :partial => "fieldrow_gustatory",			:locals => { :form => form } %>
+<%= render :partial => "fieldrow_select_rating",		:locals => { :form => form } %>
+<%= render :partial => "fieldrow_select_worth",			:locals => { :form => form } %>
+<%= render :partial => "fieldrow_notes",  		        :locals => { :form => form } %>
+	
+<%= render :partial => "shared/button_save" %>

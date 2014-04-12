@@ -1,0 +1,26 @@
+<% if !bottles.empty? -%>
+  <hr>
+  <div id="showpane_sublegend">My Bottles</div>
+  <table width="100%" class="listset">
+  	<tr class="listheader">
+  	  <td>#</td>
+	  <td>Vintage</td>
+	  <td>Bottle Size (ml)</td>
+      <td colspan="2">Cellar tag & location</td>
+	</tr> 
+
+    <% bottles.each do |bottle| -%>
+      <tr valign="top" class = "<%= cycle('listrowodd', 'listroweven') %>">
+      <td><%= link_to bottle.cellarnum, {:controller => "bottle", :action => "show",
+     		:id => bottle} -%>
+	  <td><% if !bottle.vintage.nil? -%>
+	      <%= bottle.vintage -%>
+		  <% end -%>
+	  </td>
+      <td><%= bottle.bottlesize -%></td>
+      <td><%= bottle.cellarlabel -%></td>
+      <td><%= bottle.cellarlocation -%></td>
+    </tr>
+  <% end -%>
+  </table>
+<% end -%>

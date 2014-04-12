@@ -1,0 +1,6 @@
+<div class="form_row">
+	<label for="isocode_3let">ISO 3166 3-Letter Code (A3):</label>
+	<%= form.text_field :isocode_3let, 
+						:size => Country::ISOCODE_3LET_SIZE,
+						:maxlength => Country::ISOCODE_3LET_LENGTH %>
+</div>

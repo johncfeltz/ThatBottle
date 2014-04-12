@@ -1,0 +1,5 @@
+<% if !bottle.instock? -%>
+  <hr>
+  <div id="showpane_sublegend">Disposition</div>
+  <p><b>Disposed of via: </b><%= bottle.disptype.disptype %></p>
+<% end -%>

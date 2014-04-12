@@ -1,0 +1,23 @@
+<% if @apptypes and not @apptypes.empty? %>
+  <table class="listset">
+    <tr class="listheader">
+      <td>Abbreviation</td>
+      <td>Full name</td>
+      <td>Translation</td>
+	  <td>Country</td>
+	  <td>Next Higher Category</td>
+    </tr>
+
+    <% @apptypes.each do |apptype| -%>
+      <tr valign="top" class="<%= cycle('listrowodd', 'listroweven') %>">
+      <td><%= link_to apptype.abbrev,         :action => 'show', :id => apptype %></td>
+      <td><%= link_to apptype.fullname,       :action => 'show', :id => apptype %></td>
+      <td><%= render :partial => "list_cell_translation",   :locals => { :apptype => apptype } %></td>
+      <td><%= link_to apptype.country.name,   :action => 'show', :id => apptype.country_id, 
+									  		  :controller => 'country' %></td>
+      <td><%= render :partial => "list_cell_nexthigher" , :locals => { :apptype => apptype } %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= will_paginate @apptypes unless !@pagination %>
+<% end %>

@@ -1,0 +1,28 @@
+# warehousetypes.yml version 2: 1-July-2008
+#   loaded by rake db:bootstrap:load_enum
+#   New ENUM type, not present in ThatBottle Beta 1
+#   
+
+Retail:
+  id: 1
+  whtype: retail
+  
+Cafe:
+  id: 2
+  whtype: cafe
+  
+Distribution:
+  id: 3
+  whtype: distribution
+  
+Import-Export:
+  id: 4
+  whtype: import-export
+  
+Vintner:
+  id: 5
+  whtype: vintner
+
+Other:
+  id: 6
+  whtype: other

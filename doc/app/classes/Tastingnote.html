@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Tastingnote</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Tastingnote</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/models/tastingnote_rb.html">
+                app/models/tastingnote.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ActiveRecord::Base
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Project: ThatBottle File: app/models/tastingnote.rb Version: Beta 2 Date:
+24 July 2008
+</p>
+<p>
+Copyright 2008 by John Christoph Feltz; all rights reserved.
+</p>
+<p>
+Definition and extension for <a href="Tastingnote.html">Tastingnote</a>
+class, plus relationships to other classes. Rails automatically associates
+this with the DB table &#8216;tastingnotes&#8216;
+</p>
+<p>
+<a href="Tastingnote.html">Tastingnote</a> is the most important
+model/concept - the heart of the site, really - both technically and in
+terms of the viability of ThatBottle.com.
+</p>
+<p>
+Techical:
+</p>
+<ol>
+<li>It&#8216;s polymorphic - either to wine or to bottle
+
+<pre>
+   1.1 If it's related to wine, we need to include vintage in the data model
+   1.2 If it's related to bottle, bottle.vintage overrides tastingnote.vintage
+</pre>
+</li>
+<li>It&#8216;s owned by a member
+
+<pre>
+   2.1 But other members can see it - paid members anytime, free members within 30 days of the
+       create date
+   2.2 The member who owns it can always see it
+   2.3 The friendship model will make it even more complicated
+</pre>
+</li>
+</ol>
+<p>
+Business:
+</p>
+<ol>
+<li>The rating scales are crucial
+
+<pre>
+   3.1 A 100-point scale gives a false sense of precision
+   3.2 A 10-point scale might not give enough precision
+   3.3 The 20-point scale is unfamiliar to most laymen
+   3.4 Do people think linearly or logarithmically about this kind of thing?
+</pre>
+<p>
+WWID? (What would IMDB do?)
+</p>
+</li>
+</ol>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">VISUAL_HORIZ_SIZE</td>
+          <td>=</td>
+          <td class="context-item-value">60</td>
+          <td width="3em">&nbsp;</td>
+          <td class="context-item-desc">
+Text box sizes for display in views
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">VISUAL_VERT_SIZE</td>
+          <td>=</td>
+          <td class="context-item-value">5</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">OLFACTORY_HORIZ_SIZE</td>
+          <td>=</td>
+          <td class="context-item-value">60</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">OLFACTORY_VERT_SIZE</td>
+          <td>=</td>
+          <td class="context-item-value">5</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">GUSTATORY_HORIZ_SIZE</td>
+          <td>=</td>
+          <td class="context-item-value">60</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">GUSTATORY_VERT_SIZE</td>
+          <td>=</td>
+          <td class="context-item-value">5</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">NOTES_HORIZ_SIZE</td>
+          <td>=</td>
+          <td class="context-item-value">60</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">NOTES_VERT_SIZE</td>
+          <td>=</td>
+          <td class="context-item-value">10</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">QUERY_RETURN_ORDER</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;created_at, id&quot;</td>
+          <td width="3em">&nbsp;</td>
+          <td class="context-item-desc">
+Return order for generalize queries
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">FREE_MEMBER_HORIZON</td>
+          <td>=</td>
+          <td class="context-item-value">30</td>
+          <td width="3em">&nbsp;</td>
+          <td class="context-item-desc">
+Number of days tasting notes are available for view by free members
+
+</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

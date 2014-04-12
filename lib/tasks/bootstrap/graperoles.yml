@@ -1,0 +1,17 @@
+# graperoles.yml version 2: 1-July-2008
+#   loaded by rake db:bootstrap:enum_load
+#   Change/Development History:
+#   * unchanged from ThatBottle Beta 1B
+#   
+
+Major:
+  id: 1
+  role: major
+  
+Minor:
+  id: 2
+  role: minor
+  
+Obsolete:
+  id: 3
+  role: obsolete

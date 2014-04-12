@@ -1,0 +1,7 @@
+<%= render :partial => "shared/content_header", :locals => { :model => "country" } %>
+<h2><%= @title -%></h2>
+
+<%= render :partial => "shared/alpha_index" %>
+
+<% @pagination = true %>
+<%= render :partial => "table" %>

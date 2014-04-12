@@ -1,0 +1,23 @@
+<%= render :partial => "shared/content_header", :locals => { :model => "grape" } %>
+
+<div id="showpane">
+  <div id="showpane_legend"><%= @appellation.name %></div>
+  <p><b>Appellation Type: </b><%= link_to @appellation.apptype.abbrev,
+		{:controller => "apptype", :action => "show",
+		 :id => @appellation.apptype} %> &nbsp
+		<%= link_to @appellation.apptype.country.name,
+		{:controller => "country", :action => "show",
+		 :id => @appellation.apptype.country} %></p>
+
+  <p><b>Notes: </b><%= @appellation.notes %></p>
+
+  <%= render :partial => "show_parent",   :locals => { :appellation => @appellation } -%>
+  <%= render :partial => "show_children", :locals => { :appellation => @appellation } -%>
+  <br>
+
+  <hr>  
+  <div id="showpane_sublegend">Wines</div>
+  <%= render :partial => "show_wines", :locals => { :wines => @wines } -%>
+</div>
+
+<%= render :partial => "shared/show_footer", :locals => { :model => "appellation", :id => @appellation } %>

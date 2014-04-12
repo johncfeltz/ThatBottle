@@ -1,0 +1,18 @@
+<!-- DRY this up by consolidating with new_b  -->
+<!--   there are 2 because it's polymorphic and there's an additional field (vintage) when
+	   relating to wine rather than to bottle (because bottle.vintage exists already...)  -->
+
+<%= render :partial => "shared/content_header" %>
+<h2><%= @title %></h2>
+
+<% form_for :tastingnote, :url => {:id => @wine} do |form| %>
+  <fieldset>
+  	<legend>Enter Details</legend>
+	
+	<%= error_messages_for "tastingnote" %>
+	
+	<%= render :partial => "fieldrow_vintage",			:locals => { :form => form } %>
+	<%= render :partial => "new_common",				:locals => { :form => form } %>
+	
+  </fieldset>
+<% end %>

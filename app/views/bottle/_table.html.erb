@@ -1,0 +1,21 @@
+<% if @bottles and not @bottles.empty? %>
+  <table class="listset">
+    <tr class="listheader">
+      <td>#</td>
+	  <td>Vintage</td>
+      <td colspan="2">Cellar Tag & Location</td>
+	  <td>Wine</td>
+    </tr>
+	
+    <% @bottles.each do |bottle| -%>
+      <tr valign="top" class = "<%= cycle('listrowodd', 'listroweven') %>">
+        <td><%= link_to bottle.cellarnum, 	 	  :action => "show", :id => bottle %></td>
+	    <td><%= render :partial => "list_cell_vintage",       	  :locals => { :bottle => bottle }%></td>
+	        <%= render :partial => "list_cells_label_and_location", :locals => { :bottle => bottle }%>
+        <td><%= link_to bottle.wine.nameproducer, :action => "show", :id => bottle.wine_id,
+											 	  :controller => "wine" %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= will_paginate @bottles unless !@pagination %>
+<% end %>

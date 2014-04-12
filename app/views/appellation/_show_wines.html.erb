@@ -1,0 +1,20 @@
+<% if @wines and not @wines.empty? %>
+  <table class="listset">
+    <tr class="listheader">
+      <td>Name</td>
+      <td>Producer</td>
+	  <td colspan="2">Characteristics</td>
+    </tr>
+	
+    <% @wines.each do |wine| -%>
+      <tr valign="top" class = "<%= cycle('listrowodd', 'listroweven') %>">
+        <td><%= link_to wine.name, :controller => 'wine', :action => 'show', :id => wine %></td>
+        <td><%= wine.producer %></td>
+	    <td><%= wine.winetype.winetype   %></td>
+	    <td><%= wine.winecolor.winecolor %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <p>(none)</p>
+<% end -%>

@@ -1,0 +1,29 @@
+<%= render :partial => "shared/content_header", :locals => { :model => "grape" } %>
+
+<h2><%= @title %></h2>
+
+<% form_for :bottle do |form| %>
+  <fieldset>
+  	<legend>Enter Details</legend>
+	
+	<%= error_messages_for "bottle" %>
+	
+	<%= render :partial => "fieldrow_select_wine", 		:locals => { :form => form } %>
+	<%= render :partial => "fieldrow_vintage",   		:locals => { :form => form } %>
+	<%= render :partial => "fieldrow_bottlesize",       :locals => { :form => form } %>
+	<%= render :partial => "fieldrow_alcohol",  		:locals => { :form => form } %>
+	<%= render :partial => "fieldrow_cellarlabel", 	 	:locals => { :form => form } %>
+	<%= render :partial => "fieldrow_cellarlocation", 	:locals => { :form => form } %>
+	<%= render :partial => "fieldrow_notes",  			:locals => { :form => form } %>
+ 	
+	<div class="form_row">
+	  <label for="numbotts">How many bottles?</label>
+	  <%= text_field_tag(:numbotts, "1", :size => "3") # old style tag to keep numbotts out of Bottle model 
+		-%>  
+    </div>
+
+    <%= render :partial => "shared/button_save" %>
+	
+  </fieldset>
+
+<% end %>

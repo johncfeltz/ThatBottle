@@ -1,0 +1,25 @@
+# winetypes.yml version 2: 1-July-2008
+#   loaded by rake db:bootstrap:enum_load
+#   Change/Development History:
+#   * re-ordered some items from ThatBottle Beta 1B
+#
+
+Table:
+  id: 1
+  winetype: table
+  
+Sparkling:
+  id: 2
+  winetype: sparkling
+  
+Dessert:
+  id: 3
+  winetype: dessert
+  
+Fortified:
+  id: 4
+  winetype: fortified
+
+Flavored:
+  id: 5
+  winetype: flavored

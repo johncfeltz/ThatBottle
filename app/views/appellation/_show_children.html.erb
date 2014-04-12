@@ -1,0 +1,44 @@
+<% if !appellation.children.empty? -%>
+  <hr>
+  <div id="showpane_sublegend">Sub-Appellations</div>
+  
+  <!-- we're going to assume no more than 4 columns (12*4 = 48 sub-appellations) -->
+
+  <% numcols = (appellation.children.size / Appellation::PAGINATION).to_int + 1 -%>
+
+<!--
+  <p>Number of sub-appellations: <%= appellation.children.size %></p>
+  <p>Number of apps per column: <%= Appellation::PAGINATION %></p>
+  <p>Number of columns: <%= numcols %></p>	
+
+  <% 1.step(numcols, 1) do |column| %>
+     <% lownum = (column-1)*Appellation::PAGINATION + 1 %>
+	 <% highnum = column*Appellation::PAGINATION %>
+     <p>Column: <%= column%>    Lownum = <%= lownum %>   Highnum = <%= highnum%></p>
+  <% end -%>	 
+-->
+
+  <div id = "narrowcol1_<%= numcols %>">
+  <% appcount = 1 %>
+  <% colcount = 1 %>
+  <table cellpadding="2" cellspacing="0" class="listset">
+  <% appellation.children.each do |appellation| -%>
+     <tr valign="top" class="<%= cycle('listrowodd', 'listroweven') %>">
+       <td><%= link_to appellation.name,       :action => 'show', :id => appellation %></td>
+	   <% appcount += 1 %>
+	 <% if appcount == Appellation::PAGINATION + 1 %>
+	   <% appcount = 1 %>
+	   <% colcount += 1 %>
+	   <td>start new column w/ appcount = <%= appcount %> and colcount = <%= colcount %></td>
+	   </tr>
+	   </table>
+	   </div>
+	   <div id = "narrowcol<%= colcount %>_<%= numcols %>">
+       <table cellpadding="2" cellspacing="0" class="listset">
+	 <% else %>
+	   </tr>
+	 <% end %>  
+  <% end -%>
+  </table>
+  </div>
+<% end -%>

@@ -1,0 +1,426 @@
+/* Flow is as follows (see views/layouts/application.html.erb):
+ * <head>
+ *   <title></title>
+ * </head>
+ * <body><wholepage>
+ *   <header></header>				# via shared partial
+ *   <topnav></topnav>				# via shared partial
+ *   <topnav2></topnav2>			# via shared partial - depends on user status
+ *   <middle>
+ *     <leftnav></leftnav>			# via shared partial
+ *     <content>    				# break normal flow; position relative to leftnav
+ *       <notice></notice>
+ *       .. yield main content ..   # lots of stuff going on here
+ *     </content>
+ *   </middle>   
+ *   <footer></footer>				# via shared partial
+ *   <debug></debug> 
+ * </wholepage></body>
+ *   
+ */
+
+/**************************************************************************************/
+/* 
+ * Major <div> elements, listed in order of flow.
+ * sub-specs for the divs are found below, in the same general order.
+ * the <content> div has the most sub-specs, as it includes forms, lists, show panes, etc.
+ */
+
+body {
+	font-family: sans-serif;
+	background: gray;
+	margin: 0;
+}
+
+#whole_page {
+    background: white;
+	width: 70em;
+	margin: auto;
+	padding: 0;
+	text-align: left;
+	border-width:  1px 1px 1px 1px;
+	border-color: black;
+	border-style: solid;
+}
+
+#header {
+	color: white;
+	background: maroon;
+	font-size: 24pt;
+	padding: 0.25em;
+	margin-bottom: 0;
+}
+
+#topnav {
+	color: black;
+	font-size: 12pt;
+	font-weight: bold;
+	background: #ccc;
+	padding: 0.5em;
+}
+
+#topnav2 {
+	color: black;
+	font-size: 10pt;
+	font-weight: bold;
+	background: #ddd;
+	padding: 0.5em;	
+}
+
+#middle {
+	background: #FFD0D0;	/* need to make this color inherit down for the leftnav column... */
+}
+
+#leftnav {
+	background: inherit;
+	float: left;
+	width: 12%;
+	padding: 4px 4px 4px 2px;
+}
+
+#content {
+	background: white;
+	float: right;
+	width: 85%;
+}
+
+#footer {
+	color: black;
+	background: #FFD0D0;
+	font-size: 8pt;
+	padding: 0.25em;
+	margin-bottom: 0;
+    clear: both;
+	text-align: center;
+}
+
+/**************************************************************************************/
+/* 
+ * Navigation Styles for the three major fixed or semi-fixed nav bars.
+ * Topnav is always displayed and relatively fixed
+ * Topnav2 is dependent on user type and login status 
+ * Leftnav is fixed, but will show more ERD-type data with additional beta releases
+ */
+
+#topnav a, #topnav a:visited {
+	color: maroon;
+	text-decoration: none;
+}
+
+#topnav a:hover {
+	border-bottom: 2px dotted maroon;
+}
+
+#topnav2 a, #topnav2 a:visited {
+	color: maroon;
+	text-decoration: none;
+}
+
+#topnav2 a:hover {
+	border-bottom: 2px dotted maroon;
+}
+
+#leftnav a, #leftnav a:visited {
+	color: maroon;
+	text-decoration: none;
+}
+
+#leftnav a:hover {
+	border-bottom: 2px dotted maroon;
+}
+
+/**************************************************************************************/
+/*
+ * Content
+ * Almost all HTML elements in content are over-ridden with additional divs, but a few defaults first.
+ * Then the major blocks - some of which can appear together, some not.
+ */
+
+#content #content_header {
+	float: right;
+	font-size: 14pt;
+	font-weight: bold;
+	background: #ada;
+	padding: 0.5em;
+}
+
+#content #content_header a, #content_header a:visited {
+	color: #6030C0;
+	text-decoration: none;
+}
+
+#content #content_header a:hover {
+	border-bottom: 2px dotted #6030C0;
+}
+
+#content h1 {
+	font-size: 18pt;
+}
+
+/* Flash Notice Style */
+
+#notice {
+	border: 1px solid green;
+	color: #008050;
+	padding: 1em;
+	margin: 1em;
+	margin-bottom: 2em;
+	background-color: lightgray;
+	font: bold smaller sans-serif;
+}
+
+/**************************************************************************************/
+/* Form Styles */
+
+fieldset {
+	background: #ddd;
+}
+legend {
+	color: white;
+	font-weight: bold;
+	background: maroon;
+	padding: .4em 1em;
+}
+
+label {
+	width: 8em;
+	float: left;
+	text-align: right;
+	margin-right: 0.2em;
+	display: block;
+}
+.form_row {
+	white-space: nowrap;
+	padding-bottom: .5em;
+}
+.submit {
+	margin-left: 15em;
+}
+
+/* Error Reporting Styles
+ * Sub-styles of the overall Form styles
+ */
+
+.fieldWithErrors {
+	margin: 2px;
+	padding: 2px;
+	background-color: red;
+	display: table;
+}
+
+#errorExplanation {
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 12pt;
+	margin: -7px;
+	background-color: #c00;
+	color: #fff;
+}
+
+#errorExplanation p {
+	color: #333;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+#errorExplanation ul li {
+	font-size: 11pt;
+	list-style: square;
+}
+
+/**************************************************************************************/
+/* List Table Styles */
+
+.listset {
+	background: #ddd;
+}
+.listheader {
+	color: black;
+	font-weight: bold;
+}
+
+.listheader a, .listheader a:visited {
+	color: maroon;
+	text-decoration: none;
+}
+
+.listheader a:hover {
+	border-bottom: 2px dotted maroon;
+}
+
+.listrow0{
+	background: #a0d0ff;
+}
+.listrow1{
+	background: #d0a0ff;
+}
+.listrowodd{
+	background: #a0d0ff;
+}
+.listroweven{
+	background: #d0a0ff;
+}
+.faded {
+	color: gray;
+	font-weight: lighter;
+}
+
+.listset td.bottom {
+	border-top: 1px solid #999;
+	padding-top: 10px;
+}
+
+.listset th {
+	color: white;
+	background: maroon;
+	font-weight: normal;
+}
+
+/**************************************************************************************/
+/* Show pane
+ * some similarities to form styles
+ */
+
+#showpane {
+	background: #ddd;
+	width: 72%;
+	padding: 2px 5px 2px 5px;	
+	margin: 3em 0 0 0;
+}
+
+#showpane_legend {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	background: maroon;
+	padding: 4px 1px 4px 1px;
+	margin: -1em 18em 1px 1em;
+}
+
+#showpane_sublegend {
+	color: white;
+	font-weight: bold;
+	text-align: left;
+	background: #A00000;
+	padding: .2em 1em .2em 1em;
+	margin: 0 28em 1px 3em;
+}
+
+
+/**************************************************************************************/
+/* multi-column list table divs
+ * still working on this.  not sure about it at all...
+ */
+
+
+#content #narrowcol1_1 {
+	position: relative;
+}
+
+#content #narrowcol1_2 {
+	width: 50%;
+    float: left;
+}
+
+#content #narrowcol2_2 {
+	width: 50%;
+	float: left;
+}
+
+/**************************************************************************************/
+/* Alphabetical Index Styles */
+
+#alpha_index {
+	background: #ddd;
+	width: 72%;
+	padding: 2px 5px 2px 5px;
+	border-color: black;
+	border-width: 1px;
+	border-style: double;
+	margin-bottom: 4px;
+}
+
+#alpha_index_title {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	background: maroon;
+	padding: 4px 1px 4px 1px;
+	margin: -1em 18em 1px 1em;
+}
+
+/* these are only invoked from #alpha_index */
+
+.letter, .letter_current {
+	width: 1em;
+	text-align: center;
+	border: 1px solid gray;
+	background: #fff;
+	padding: 5px 2px 1px 2px;
+	float: left;
+	margin: 2px;
+}
+
+.letter:hover {
+	background: #fe4;
+}
+
+.letter_current {
+	background: #fe4;
+	font-weight: bold;
+	border: 1px solid black;
+}
+
+/* not sure about these - are they subsets of #alpha_index or not? */
+
+a, a#visited {
+	color: maroon;
+	text-decoration: none;
+}
+
+/**************************************************************************************/
+/* 
+ * Debug Styles - use Javascript to appear/disappear from the page
+ */  
+
+#debug {
+	font-family: sans-serif;
+	background: black;
+	margin: 0;
+	margin-top: 1em;
+	margin-left: auto;
+}
+
+#debug a, #debug a.visited {
+	text-decoration: none;
+	color: maroon;
+}
+
+fieldset.debug_info {
+	text-align: left;
+	margin: 1em;
+	background: #eee;
+}
+
+.debug_dump {
+	text-align: left;
+	border-top: 1px dashed black;
+	background: #ccc;
+	margin: 0;
+	padding: 0.5em;
+}
+
+
+/* Insert MS IE hacks here...  blech....  */
+
+
+/* end of IE hacks */

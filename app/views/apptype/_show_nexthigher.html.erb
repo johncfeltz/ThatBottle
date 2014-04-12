@@ -1,0 +1,7 @@
+<% if !apptype.parent.nil? -%>
+  <p>
+  	<b>Next higher appellation type: </b>
+	<%= link_to apptype.parent.abbrev, :action => 'show', :id => apptype.parent.id %>
+  </p`>	
+<% end -%>
+

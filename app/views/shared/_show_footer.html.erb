@@ -1,0 +1,8 @@
+<p>
+  <% if is_allowed?(model, "edit") %>
+    <%= link_to "Edit this " + model, :action => 'edit', :id => id %> |
+  <% end %>
+  <% if is_allowed?(model, "delete") %>
+    <%= link_to "Delete this " + model, { :action => 'destroy', :id => @grape }, :confirm => 'Are you sure?' %> |
+  <% end %>
+</p>

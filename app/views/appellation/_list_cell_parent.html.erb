@@ -1,0 +1,3 @@
+<% if !appellation.parent.nil? %>
+   <%= link_to appellation.parent.name, :action => 'show', :id => appellation.parent.id %>
+<% end %>

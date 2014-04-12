@@ -1,0 +1,21 @@
+<%= render :partial => "shared/content_header", :locals => { :model => "wine" } %>
+<h2><%= @title %></h2>
+
+<% form_for :wine, :url => {:id => @wine} do |form| %>
+  <fieldset>
+  	<legend>Edit Details</legend>
+	
+	<%= error_messages_for "wine" %>
+	
+    <%= render :partial => "fieldrow_name",                 :locals => { :form => form } %>
+    <%= render :partial => "fieldrow_producer",             :locals => { :form => form } %>
+	<%= render :partial => "fieldrow_select_winetype", 	    :locals => { :form => form } %>
+	<%= render :partial => "fieldrow_select_winecolor", 	:locals => { :form => form } %>
+	<%= render :partial => "fieldrow_select_appellation",   :locals => { :form => form } %>
+	<%= render :partial => "fieldrow_refs",  		        :locals => { :form => form } %>
+	<%= render :partial => "fieldrow_notes",  		        :locals => { :form => form } %>
+	
+    <%= render :partial => "shared/button_save" %>
+	
+  </fieldset>
+<% end %>

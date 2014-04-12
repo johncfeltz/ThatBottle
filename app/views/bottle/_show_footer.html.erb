@@ -1,0 +1,11 @@
+<p>
+  <% if ((is_allowed?("tastingnote", "new_b", @bottle)) && (bottle.instock?)) %>
+    <%= link_to 'I tasted this bottle', :controller => 'tastingnote', :action => 'new_b', :id => @bottle %> |
+  <% end %>
+  <% if is_allowed?("bottle", "edit", @bottle) %>
+	<%= link_to 'Edit this bottle', :action => 'edit', :id => @bottle %> |
+  <% end %>
+  <% if is_allowed?("bottle", "delete", @bottle) %>
+    <%= link_to 'Delete this bottle', { :action => 'destroy', :id => @bottle }, :confirm => 'Are you sure?' %> |
+  <% end %>
+</p>

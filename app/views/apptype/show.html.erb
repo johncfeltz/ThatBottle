@@ -1,0 +1,18 @@
+<%= render :partial => "shared/content_header", :locals => { :model => "apptype" } %>
+
+<div id="showpane">
+  <div id="showpane_legend"><%= @apptype.abbrev %></div>
+  <p><b>Full Name: </b><%= @apptype.fullname %></p>
+  <p><b>Translation: </b><%= @apptype.translation %></p>
+  <p><b>Country: </b><%= link_to @apptype.country.name,
+                {:controller => "country", :action => "show", 
+                 :id => @apptype.country} %></p>
+  <%= render :partial => "show_nexthigher",   :locals => { :apptype => @apptype } %>				 
+  <p><b>Notes: </b><%= @apptype.notes %></p>
+
+  <hr>
+  <div id="showpane_sublegend">Appellations</div>
+  <%= render :partial => "show_appellations", :locals => { :appellations => @appellations } %>
+</div>
+
+<%= render :partial => "shared/show_footer", :locals => { :model => "apptype", :id => @apptype } %>

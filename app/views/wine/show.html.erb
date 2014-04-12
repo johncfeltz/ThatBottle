@@ -1,0 +1,22 @@
+<%= render :partial => "shared/content_header", :locals => { :model => "wine" } %>
+
+<div id="showpane">
+  <div id="showpane_legend"><%= @wine.name %></div>
+  <p><b>Producer: </b><%= @wine.producer %></p>
+  <p><b>Type: </b><%= @wine.winetype.winetype %></p>
+  <p><b>Color: </b><%= @wine.winecolor.winecolor %></p>
+  <p><b>Appellation: </b><%= link_to @wine.appellation.namechain_naked, 
+							 {:controller => "appellation", 
+							  :action => "show", :id => @wine.appellation} %></p>
+  <p><b>Reviews and References: </b><%= @wine.refs %></p>
+  <p><b>Notes: </b><%= @wine.notes %></p>
+
+<!-- these two depend on whether logged in or not: partials will include session logic -->
+<!-- need to finalize polymorphic associations in ordere to do tastings correctly -->
+
+  <%= render :partial => "show_bottles",  :locals => { :bottles => @bottles } %>
+  <%= render :partial => "show_tastings", :locals => { :tastingnotes => @wine.tastingnotes } %>
+
+</div>
+
+<%= render :partial => "show_footer", :locals => { :id => @wine } %>

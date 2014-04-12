@@ -1,0 +1,22 @@
+<% if @tnotes and not @tnotes.empty? %>
+  <table class="listset">
+    <tr class="listheader">
+      <td>Date</td>
+      <td>Wine</td>
+	  <td>Vintage</td>
+	  <td>Score (0-10)</td>
+	  <td>Value (1-5)</td>
+    </tr>
+	
+    <% @tnotes.each do |tn| -%>
+      <tr valign="top" class = "<%= cycle('listrowodd', 'listroweven') %>">
+        <td><%= link_to tn.created_at, :action => 'show', :id => tn %></td>
+		<td><%= render :partial => "cell_wine",	  	:locals => { :tn => tn } %>
+        <td><%= tn.vintage %></td>
+	    <td><%= tn.score   %></td>
+	    <td><%= tn.worth %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= will_paginate @tnotes unless !@pagination %>
+<% end %>

@@ -1,0 +1,17 @@
+# profiles.yml version 2: 1-July-2008
+#   loaded by rake db:bootstrap:admin_load
+#   Change/Development History:
+#
+Admin:
+  id: 1
+  user_id: 1
+  name: John C. Feltz
+  location: Dayton, Ohio (USA)
+  age: 40s
+  interests: Wine (of course), cooking, programming, family history.
+  wineloves: Bordeaux (red and white), Spanish reds, South Africa, high-quality reds from minor appellations in Languedoc
+  winehates: Sweet Riesling, sweet rosé, expensive Chianti.
+  memories: My family had a vineyard when I was a kid - I loved the smell of the fermentation room, as carbon dioxide slowly bubbled out of the barrels.
+  publicbottles: 1
+  
+  

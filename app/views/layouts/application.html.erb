@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title><%= @title %></title>
+		<%= stylesheet_link_tag "site" %>
+		<%= javascript_include_tag :defaults %>
+	</head>
+	<body>
+	  <div id="whole_page">
+
+        <%= render :partial => "shared/header" %>
+        <%= render :partial => "shared/topnav" %>
+        <%= render :partial => "shared/topnav2" %>
+
+		<div id="middle">
+          <%= render :partial => "shared/leftnav" %>
+		  <div id="content">
+		    <% if flash[:notice] -%>
+		      <div id="notice"><%= flash[:notice] %></div>
+		    <% end -%>
+ 		    <%= yield %>
+		  </div>
+		</div>
+		
+        <%= render :partial => "shared/footer" %>
+			
+		<% if ENV["RAILS_ENV"] == "development" %>
+		  <div id="debug">
+		  	<a href="#" onclick="Element.toggle('params_debug_info');return false">params</a> |
+		  	<a href="#" onclick="Element.toggle('session_debug_info');return false">session</a> |
+		  	<a href="#" onclick="Element.toggle('env_debug_info');return false">env</a> |
+			<a href="#" onclick="Element.toggle('request_debug_info');return false">request</a>
+			<fieldset id="params_debug_info" class="debug_info" style="display: none">
+				<legend>params</legend>
+		        <%= debug(params) %>
+			</fieldset>
+			<fieldset id="session_debug_info" class="debug_info" style="display: none">
+				<legend>session</legend>
+		        <%= debug(session) %>
+			</fieldset>
+			<fieldset id="env_debug_info" class="debug_info" style="display: none">
+				<legend>env</legend>
+		        <%= debug(request.env) %>
+			</fieldset>
+			<fieldset id="request_debug_info" class="debug_info" style="display: none">
+				<legend>request</legend>
+		        <%= debug(request) %>
+			</fieldset>
+		  </div>
+		<% end %>
+	  </div>
+	</body>
+</html>

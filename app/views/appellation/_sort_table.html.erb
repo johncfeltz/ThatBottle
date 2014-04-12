@@ -1,0 +1,19 @@
+<% if @appellations and not @appellations.empty? %>
+  <table cellpadding="2" cellspacing="0" class="listset">
+    <tr class="listheader">
+      <td><%= link_to "Name",     :action => 'sortlist', :sortcolumn => 'name' %></td>
+      <td><%= link_to "Category", :action => 'sortlist', :sortcolumn => 'apptype_id' %></td>
+      <td><%= link_to "Parent",   :action => 'sortlist', :sortcolumn => 'parentappellation_id' %></td>
+    </tr>
+
+    <% @appellations.each do |appellation| -%>
+      <tr valign="top" class="<%= cycle('listrowodd', 'listroweven') %>">
+        <td><%= link_to appellation.name,       :action => 'show', :id => appellation %></td>
+        <td><%= link_to appellation.apptype.namechain_naked,    :action => 'show', 
+											:id => appellation.apptype_id, :controller => 'apptype' %></td>
+        <td><%= render :partial => "list_cell_parent" , :locals => { :appellation => appellation } %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= will_paginate @appellations %>
+<% end %>

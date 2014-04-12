@@ -1,0 +1,13 @@
+valid_country:
+  id: 1
+  name: FRANCE
+  isocode_num: 234
+  isocode_2let: FR
+  isocode_3let: FRA
+  
+invalid_country:
+  id: 2
+  name: UK
+  isocode_num: 12
+  isocode_2let: United
+  isocode_3let: UK

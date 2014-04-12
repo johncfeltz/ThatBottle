@@ -1,0 +1,14 @@
+valid_appellation_1:
+  id: 1
+  apptype_id: 1
+  name: Cotes du Rhone
+  
+valid_appellation_2:
+  id: 2
+  apptype_id: 1
+  name: Cotes du Rhone-Villages
+  parentappellation_id: 1
+  
+invalid_appellation:
+  id: 3
+  name: abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx abcdefghijklmnopqrstuvwx

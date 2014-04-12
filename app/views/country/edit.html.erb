@@ -1,0 +1,20 @@
+<%= render :partial => "shared/content_header", :locals => { :model => "country" } %>
+<h2><%= @title %></h2>
+
+<% form_for :country, :url => {:id => @country} do |form| %>
+  <fieldset>
+  	<legend>Edit Details</legend>
+	
+	<%= error_messages_for "country" %>
+	
+    <%= render :partial => "fieldrow_name", 		 :locals => { :form => form } %>
+    <%= render :partial => "fieldrow_isocode_2let",  :locals => { :form => form } %>
+    <%= render :partial => "fieldrow_isocode_3let",  :locals => { :form => form } %>
+	<%= render :partial => "fieldrow_isocode_num",   :locals => { :form => form } %>
+	<%= render :partial => "fieldrow_notes",  		 :locals => { :form => form } %>
+	
+    <%= render :partial => "shared/button_savechanges" %>
+	
+  </fieldset>
+<% end %>
+  

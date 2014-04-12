@@ -1,0 +1,23 @@
+# userstatuses.yml version 2: 1-July-2008
+#   loaded by rake db:bootstrap:enum_load
+#   Change/Development History:
+#   * New ENUM type, not present in ThatBottle Beta 1B
+#   
+
+Admin:
+  id: 1
+  status: admin
+  
+Pro:
+  id: 2
+  status: pro
+  
+Full:
+  id: 3
+  status: full
+  
+Free:
+  id: 4
+  status: free
+  
+  

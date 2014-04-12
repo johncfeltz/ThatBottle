@@ -1,0 +1,6 @@
+<div class="form_row">
+	<% @worths = (1..5).map {|w| [w, w]} %>
+	<label for="worth">Value for Money:</label>
+	<%= form.select(:worth, @worths)  %>
+	1 = not worth the price, 2 = expensive, 3 = fairly priced, 4 = good value for the money, 5 = outright bargain
+</div>

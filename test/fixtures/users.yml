@@ -1,0 +1,13 @@
+valid_user:
+  id: 1
+  handle: john_feltz
+  fullname: John C. Feltz
+  email: feltzwines@gmail.com
+  password: asdfdsafds
+  
+invalid_user:
+  id: 2
+  handle: aa/noyes
+  fullname: aa
+  email: anoyes@example,com
+  password: 123
